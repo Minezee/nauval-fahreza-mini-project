@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-active::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  background-color: white;
+  width: 4px;
+  height: 40px;
+  border-radius: 0 8px 8px 0;
+}
+
+.nav-active::after {
+  @apply w-0 h-0 border-t-[50px] border-t-transparent border-l-[15px] border-l-primary border-b-[50px] border-b-transparent rounded-lg;
+  content: "";
+  position: absolute;
+  right: -41px;
+}
+
+.note-card img {
+  display: none;
+}
+
+.note-card h2 {
+  @apply text-3xl font-bold line-clamp-1;
+}
+
+.note-card p {
+  @apply mt-2;
+}
+
+.note-card > ol {
+  list-style-type: none;
+  counter-reset: list-counter;
+  margin-top: 4
+}
+
+.note-card > ol > li {
+  @apply text-base mb-3 ml-10 relative;
+}
+
+.note-card > ol > li::before {
+  content: counter(list-counter, number) ".";
+  counter-increment: list-counter;
+  font-size: 16px;
+  position: absolute;
+  left: -30px;
+  top: 0;
+}
+
+.note-card > ul {
+  list-style-type: none;
+  counter-reset: list-counter;
+  margin-top: 4px;
+}
+
+.note-card > ul > li {
+  @apply text-base mb-3 ml-10 relative;
+}
+
+.note-card > ul > li::before {
+  content: "-";
+  counter-increment: list-counter;
+  font-size: 16px;
+  position: absolute;
+  left: -30px;
+  top: 0;
+}
+
+li {
+  position: relative;
+}
+
+li ol {
+  list-style-type: none;
+  counter-reset: list-counter;
+}
