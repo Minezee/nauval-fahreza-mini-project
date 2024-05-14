@@ -40,6 +40,7 @@ const ProjectSection = ({ project }) => {
     await updateDoc(projectDoc, { progress: destColumn.progress })
     .then(() => {
       revalidate("/")
+      revalidate("/project")
     })
   };
 
