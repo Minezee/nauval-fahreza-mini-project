@@ -1,17 +1,17 @@
 'use client'
 import React from 'react'
 import { nav_item } from '@/utils/constants/data'
-import { HiPlus } from "react-icons/hi2";
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import NoteCategory from '@/components/ui/NoteCategory';
 
-const Sidebar = () => {
+const Sidebar = ({revalidate, categoryData}) => {
   const path = usePathname();
 
   return (
-    <nav className='bg-primary w-[250px] text-white'>
-      <div className='bg-secondary text-2xl py-6 flex gap-1 items-center justify-center'>
-        <h1 className='font-extralight text-2xl italic'>Memoiré</h1>
+    <nav className='bg-primary w-[250px] text-white overflow-y-auto sidebar overflow-x-hidden'>
+      <div className='bg-primary text-2xl py-6 flex gap-1 items-center justify-center'>
+        <h1 className='font-extralight text-2xl italic text-white'>Memoiré</h1>
         <div className='w-2 h-2 bg-white rounded-full'></div>
       </div>
       <div className='px-8 py-12 flex flex-col gap-10'>
@@ -23,25 +23,7 @@ const Sidebar = () => {
             </Link>
           ))}
         </div>
-        <div className='bg-gray-800/20 h-px w-full'></div>
-        <div className='flex flex-col gap-4 text-lg'>
-          <div className='flex gap-5 items-center'>
-            <div className='bg-yellow-400 h-3 w-3 rounded-full'></div>
-            <span>Projects</span>
-          </div>
-          <div className='flex gap-5 items-center'>
-            <div className='bg-orange-400 h-3 w-3 rounded-full'></div>
-            <span>Business</span>
-          </div>
-          <div className='flex gap-5 items-center'>
-            <div className='bg-blue-400 h-3 w-3 rounded-full'></div>
-            <span>Personal</span>
-          </div>
-          <div className='flex gap-3 items-center font-extralight'>
-            <HiPlus size={20} />
-            <span>Add New</span>
-          </div>
-        </div>
+        <NoteCategory revalidate={revalidate} categoryData={categoryData}/>
       </div>
     </nav>
   )

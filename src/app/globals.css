@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply text-sm 2xl:text-base
+}
+
 .nav-active::before {
   content: "";
   position: absolute;
@@ -19,6 +23,21 @@
   right: -41px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0d0f0f;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #17181a; 
+}
+
 .note-card img {
   display: none;
 }
@@ -34,11 +53,11 @@
 .note-card > ol {
   list-style-type: none;
   counter-reset: list-counter;
-  margin-top: 4
+  margin-top: 8px;
 }
 
 .note-card > ol > li {
-  @apply text-base mb-3 ml-10 relative;
+  @apply text-base ml-8 relative;
 }
 
 .note-card > ol > li::before {
@@ -53,15 +72,15 @@
 .note-card > ul {
   list-style-type: none;
   counter-reset: list-counter;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .note-card > ul > li {
-  @apply text-base mb-3 ml-10 relative;
+  @apply text-base ml-8 relative;
 }
 
 .note-card > ul > li::before {
-  content: "-";
+  content: "•";
   counter-increment: list-counter;
   font-size: 16px;
   position: absolute;
@@ -76,4 +95,8 @@ li {
 li ol {
   list-style-type: none;
   counter-reset: list-counter;
+}
+
+.bn-editor {
+  background-color: transparent !important;
 }

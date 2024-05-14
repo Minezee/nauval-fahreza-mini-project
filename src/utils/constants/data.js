@@ -1,7 +1,7 @@
 import { PiSquaresFourLight } from "react-icons/pi"
-import { FaRegStickyNote } from "react-icons/fa";
 import { CiCalendar, CiStickyNote } from "react-icons/ci";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { RiProgress4Fill, RiProgress8Fill } from "react-icons/ri";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export const nav_item = [
   {
@@ -17,15 +17,15 @@ export const nav_item = [
     size: 30,
   },
   {
-    name: "Task",
+    name: "Project",
     icon: CiCalendar,
-    url: "/task",
+    url: "/project",
     size: 30,
   },
-  {
-    name: "Support",
-    icon: TfiHeadphoneAlt,
-    url: "/support",
-    size: 24,
-  },
 ]
+
+export const project_columns = [
+  { id: "1", title: 'Todo', progress: 1, icon: <RiProgress8Fill className='text-2xl' /> },
+  { id: "2", title: 'In Progress', progress: 2, icon: <RiProgress4Fill className='text-2xl text-yellow-400' /> },
+  { id: "3", title: 'Done', progress: 3, icon: <FaCircleCheck className='text-xl text-green-400' /> }
+];

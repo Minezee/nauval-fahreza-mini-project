@@ -1,14 +1,18 @@
 import React from 'react'
 import Navbar from '@/components/ui/Navbar'
 import Sidebar from './Sidebar';
+import { getData } from '@/hooks/init';
+import { revalidate } from '@/action/revalidatePath';
 
-const HomeLayout = ({ children }) => {
+const HomeLayout = async ({ children }) => {
+  const categoryData = await getData("category", "asc")
+
   return (
-    <div className='h-screen flex'>
-      <Sidebar />
+    <div className='h-screen flex text-black'>
+      <Sidebar revalidate={revalidate} categoryData={categoryData}/>
       <div className='flex flex-col flex-1 h-screen'>
         <Navbar />
-        <main className='px-10 py-12 overflow-y-auto'>
+        <main className='overflow-y-auto flex-1 bg-tertiary text-white'>
           {children}
         </main>
       </div>

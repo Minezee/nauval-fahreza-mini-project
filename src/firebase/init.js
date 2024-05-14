@@ -5,13 +5,13 @@ import { getDatabase } from "firebase/database";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCsKQH4Tv0JDQowD0CYZleOir854dnvT_I",
-  authDomain: "talterra.firebaseapp.com",
-  projectId: "talterra",
-  storageBucket: "talterra.appspot.com",
-  messagingSenderId: "1023526709345",
-  appId: "1:1023526709345:web:06cba279deac2b0ae0e220",
-  measurementId: "G-55GKK7490Y"
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASURE_ID
 };
 
 const app = initializeApp(firebaseConfig);
