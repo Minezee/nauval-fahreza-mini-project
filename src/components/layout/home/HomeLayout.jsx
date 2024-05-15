@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '@/components/ui/Navbar'
 import Sidebar from './Sidebar';
-import { getData } from '@/hooks/init';
+import { getData } from '@/controller/init';
 import { revalidate } from '@/action/revalidatePath';
 
 const HomeLayout = async ({ children }) => {

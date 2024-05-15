@@ -1,6 +1,6 @@
 import NoteCard from "@/components/Card/NoteCard";
 import Filter from "@/components/ui/Filter";
-import { getData } from "@/hooks/init";
+import { getData } from "@/controller/init";
 import Link from "next/link";
 import { IoIosAddCircleOutline } from "react-icons/io";
 

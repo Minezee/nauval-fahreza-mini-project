@@ -1,5 +1,5 @@
 import React from 'react';
-import { getData } from '@/hooks/init';
+import { getData } from '@/controller/init';
 import ProjectSection from '@/components/ui/ProjectSection';
 
 const Page = async () => {

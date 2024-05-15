@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { db } from "@/firebase/init";
 import { useRouter } from 'next/navigation';
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { addData } from "@/hooks/init";
+import { addData } from "@/controller/init";
 import SelectCategory from "../Popups/SelectCategory";
 
 export default function NoteEditor({ revalidate, noteTitle, content, noteId }) {

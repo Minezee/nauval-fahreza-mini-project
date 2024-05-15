@@ -1,4 +1,4 @@
-import { getData } from '@/hooks/init';
+import { getData } from '@/controller/init';
 import { project_columns } from '@/utils/constants/data';
 
 const Page = async () => {

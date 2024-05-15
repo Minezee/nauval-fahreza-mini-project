@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { FaChevronRight } from 'react-icons/fa6'
 import { RiCloseLine } from 'react-icons/ri'
 import Priority from '../Icon/Priority'
-import { addData } from '@/hooks/init'
+import { addData } from '@/controller/init'
 import { revalidate } from '@/action/revalidatePath'
 
 const PriorityButton = ({ priority, setSelectPrio, setPriority }) => {
