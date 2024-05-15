@@ -1,5 +1,5 @@
 import { revalidate } from '@/action/revalidatePath';
-import { getSingleData } from '@/controller/init'
+import { getSingleData } from '@/controller/init';
 import dynamic from 'next/dynamic';
 import React from 'react'
 
