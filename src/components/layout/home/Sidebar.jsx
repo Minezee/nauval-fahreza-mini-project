@@ -7,7 +7,7 @@ import NoteCategory from '@/components/ui/NoteCategory';
 
 const Sidebar = ({revalidate, categoryData}) => {
   const path = usePathname();
-  const color = ["text-green-400", "text-red-400", "text-purple-400"]
+  const color = ["text-green-400", "text-red-400", "text-yellow-400"]
 
   return (
     <nav className='bg-primary w-[250px] text-white overflow-y-auto sidebar overflow-x-hidden'>
