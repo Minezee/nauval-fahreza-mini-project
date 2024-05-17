@@ -7,6 +7,7 @@ import NoteCategory from '@/components/ui/NoteCategory';
 
 const Sidebar = ({revalidate, categoryData}) => {
   const path = usePathname();
+  const color = ["text-green-400", "text-red-400", "text-purple-400"]
 
   return (
     <nav className='bg-primary w-[250px] text-white overflow-y-auto sidebar overflow-x-hidden'>
@@ -16,8 +17,8 @@ const Sidebar = ({revalidate, categoryData}) => {
       </div>
       <div className='px-8 py-12 flex flex-col gap-10'>
         <div className='text-lg flex flex-col gap-10 relative'>
-          {nav_item.map(nav => (
-            <Link key={nav.name} href={nav.url} className={`grid grid-cols-3 items-center ${nav.url === path && 'nav-active'}`}>
+          {nav_item.map((nav, idx) => (
+            <Link key={nav.name} href={nav.url} className={`grid grid-cols-3 items-center hover:${color[idx]} ${nav.url === path && 'nav-active'}`}>
               <nav.icon size={nav.size} />
               <div>{nav.name}</div>
             </Link>

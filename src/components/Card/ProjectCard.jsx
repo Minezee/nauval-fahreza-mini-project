@@ -13,7 +13,7 @@ const ProjectCard = ({ data, index, columnIcon }) => {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className='bg-secondary p-4 rounded-lg flex flex-col mb-3 gap-4'
+          className='bg-secondary p-4 rounded-lg flex flex-col mb-3 gap-4 hover:shadow-[0_1px_1px_rgba(192,_132,_252,_0.5)]'
         >
           <div className='flex flex-row gap-1'>
             {columnIcon}

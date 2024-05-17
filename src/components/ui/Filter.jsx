@@ -22,7 +22,7 @@ const Filter = ({categoryData}) => {
     <div className="flex gap-2">
       <button
         onClick={() => handleFilters()}
-        className={`${filter == "" && "bg-secondary"} px-5 py-2 rounded-lg`}
+        className={`${filter == "" && "bg-secondary"} px-5 py-2 rounded-lg hover:text-red-400`}
       >
         All
       </button>
@@ -30,7 +30,7 @@ const Filter = ({categoryData}) => {
         <button
           key={category.id}
           onClick={() => handleFilters(category.name)}
-          className={`${filter == category.name && "bg-secondary"} px-5 py-2 rounded-lg`}
+          className={`${filter == category.name && "bg-secondary"} px-5 py-2 rounded-lg hover:text-red-400`}
         >
           {category.name}
         </button>

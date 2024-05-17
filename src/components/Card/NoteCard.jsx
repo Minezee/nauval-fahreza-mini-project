@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 
 const NoteCard = ({data}) => {
   return (
-    <Link href={`/notes/${data.id}`} key={data.uid} className="rounded-lg px-6 py-3 min-h-[360px] text-white/80 bg-secondary">
+    <Link href={`/notes/${data.id}`} key={data.uid} className="rounded-lg px-6 py-3 min-h-[360px] text-white/80 bg-secondary hover:shadow-[0_3px_3px_rgba(192,_132,_252,_0.5)]">
       <span className="text-sm text-gray-500">{getTimeAgo(data.createdAt)}</span>
       <div className="note-card line-clamp-[8]">
         <div className="flex flex-row items-center gap-1">

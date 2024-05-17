@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css"
 
 const inter = Inter({ subsets: ["latin"] });
 
-const RootLayout = ({ children }) => {
+const AuthLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -13,4 +13,4 @@ const RootLayout = ({ children }) => {
   )
 }
 
-export default RootLayout
+export default AuthLayout

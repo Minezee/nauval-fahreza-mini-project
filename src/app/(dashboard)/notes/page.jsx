@@ -27,7 +27,7 @@ const Page = async ({searchParams}) => {
     <div className="px-10 py-12">
       <div className="flex items-center justify-between">
         <Filter categoryData={categoryData}/>
-        <Link href={"/notes/create"} className="flex flex-row gap-3 items-center text-white">
+        <Link href={"/notes/create"} className="flex flex-row gap-3 items-center text-white hover:text-green-400">
           <IoIosAddCircleOutline className="text-3xl" />
           <span>Add new note</span>
         </Link>

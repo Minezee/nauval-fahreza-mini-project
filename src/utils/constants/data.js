@@ -17,9 +17,9 @@ export const nav_item = [
     size: 30,
   },
   {
-    name: "Project",
+    name: "Task",
     icon: CiCalendar,
-    url: "/project",
+    url: "/task",
     size: 30,
   },
 ]

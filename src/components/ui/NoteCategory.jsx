@@ -56,9 +56,9 @@ const NoteCategory = ({revalidate, categoryData}) => {
           </button>
         </form>
         :
-        <button onClick={() => setIsOpen(true)} className='flex gap-3 items-center font-extralight'>
+        <button onClick={() => setIsOpen(true)} className='flex gap-1 items-center hover:text-yellow-400'>
           <HiPlus size={20} />
-          <span>Add New</span>
+          <span>Add Category</span>
         </button>
       }
     </div>
