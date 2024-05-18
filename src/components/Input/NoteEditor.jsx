@@ -126,7 +126,7 @@ export default function NoteEditor({ revalidate, noteTitle, content, noteId }) {
       <div className="min-h-[calc(100vh-200px)] relative h-full px-10 py-12">
         <div className='max-w-4xl container mx-auto flex flex-col min-h-full'>
           <input maxLength={24} onChange={(e) => setTitle(e.target.value)} value={title} type="text" className='w-full font-extrabold mx-12 rounded-xl py-2 text-5xl focus:outline-none bg-transparent text-white' placeholder='Untitled' />
-          <BlockNoteView className="z-0" editable={!isOpen} editor={editor} style={{ backgroundColor: "transparent" }} />
+          <BlockNoteView className="z-0" editable={!isOpen} editor={editor} style={{ backgroundColor: "transparent"}} theme={"dark"} />
         </div>
         <div className="fixed right-10 bottom-5 flex flex-row items-center gap-4">
           {noteId ?
