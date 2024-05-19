@@ -3,6 +3,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const revalidate = 60;
+
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
