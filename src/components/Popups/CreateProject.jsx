@@ -36,7 +36,7 @@ const CreateProject = ({ setIsOpen, column }) => {
           progress: column.progress,
         },
         () => {
-          revalidate('/project');
+          revalidate('/task');
           handleClose()
         },
         (err) => {
