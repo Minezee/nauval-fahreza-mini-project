@@ -23,7 +23,6 @@ export default function NoteEditor({ revalidate, noteTitle, content, noteId }) {
   const genAI = new GoogleGenerativeAI(API_KEY);
 
   useEffect(() => {
-    console.log(process.env.NEXT_DEVELOPMENT)
     const ref = collection(db, 'category')
     const unsub = onSnapshot(ref, (querySnapshot) => {
       const items = [];

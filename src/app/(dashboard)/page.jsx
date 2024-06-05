@@ -8,6 +8,12 @@ const Page = async () => {
   let inProgress = project.filter(project => project.progress === 2);
   let done = project.filter(project => project.progress === 3);
 
+  if (process.env.NEXT_PUBLIC_DEVELOPMENT) {
+    console.log(process.env.NEXT_PUBLIC_DEVELOPMENT)
+  } else {
+    console.log(process.env.NEXT_PUBLIC_PRODUCTION)
+  }
+
   return (
     <div className="px-10 py-12 text-white/90">
       <h1 className="text-4xl font-bold">Hello User!</h1>
