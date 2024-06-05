@@ -7,16 +7,10 @@ const Page = async () => {
   let todo = project.filter(project => project.progress === 1);
   let inProgress = project.filter(project => project.progress === 2);
   let done = project.filter(project => project.progress === 3);
-  
-  console.log("triger")
-  if (process.env.NEXT_PUBLIC_DEVELOPMENT) {
-    console.log(process.env.NEXT_PUBLIC_DEVELOPMENT)
-  } else {
-    console.log(process.env.NEXT_PUBLIC_PRODUCTION)
-  }
 
   return (
     <div className="px-10 py-12 text-white/90">
+      {process.env.NEXT_PUBLIC_DEVELOPMENT ? process.env.NEXT_PUBLIC_DEVELOPMENT : process.env.NEXT_PUBLIC_PRODUCTION}
       <h1 className="text-4xl font-bold">Hello User!</h1>
       <p className="text-white/70">You have <span className="text-red-400">{todo.length + inProgress.length} task</span> that you <span className='text-yellow-400'>haven't finished</span> yet. Let's finish them. <span className="text-green-400">Don't forget!!!</span></p>
       <div className="w-full grid grid-cols-3 gap-4">
