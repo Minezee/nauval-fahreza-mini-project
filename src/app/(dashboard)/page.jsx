@@ -7,7 +7,8 @@ const Page = async () => {
   let todo = project.filter(project => project.progress === 1);
   let inProgress = project.filter(project => project.progress === 2);
   let done = project.filter(project => project.progress === 3);
-
+  
+  console.log("triger")
   if (process.env.NEXT_PUBLIC_DEVELOPMENT) {
     console.log(process.env.NEXT_PUBLIC_DEVELOPMENT)
   } else {
